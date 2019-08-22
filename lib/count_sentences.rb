@@ -15,8 +15,6 @@ class String
   end
 
   def count_sentences
-    self.split(/\w+["!"".""?"]/).compact.count
-#    binding.pry
-#    binding.pry
+    self.split(/[?!.]/).reject{|string| string == ""}.count
   end
 end
